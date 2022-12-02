@@ -1,0 +1,91 @@
+.skills {
+    &__title {
+        text-align: center;
+    }
+
+    .title__circle-base {
+        padding-left: 0px;
+
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .divider {
+        margin: 25px auto 0px;
+        width: 60px;
+    }
+
+    &__items-wrapper {
+        padding: 60px 10px 120px 10px;
+        display: grid;
+        gap: 13px;
+        grid-template-rows: repeat(2, 270px);
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        grid-auto-columns: minmax(270px, auto);
+    }
+
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid black;
+
+        &-title {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &__progress-wrapper {
+        padding-bottom: 120px;
+        display: grid;
+        gap: 30px 47px;
+        grid-template-rows: repeat(2, 70px);
+        grid-template-columns: repeat(3, 350px);
+        grid-auto-rows: minmax(70px, auto);
+        grid-auto-columns: minmax(350px, auto);
+    }
+
+    &__progress-item {
+        .title__circle-base {
+            padding-left: 13px;
+
+            &::before {
+                left: 0%;
+                transform: translateY(0%);
+            }
+        }
+    }
+
+    &__progress-header {
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__progress-line-out {
+        margin-top: 5px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        max-width: 350px;
+        height: 14px;
+        z-index: -2;
+    }
+
+    &__progress-line-in {
+        background: $main-color;
+        z-index: 5;
+        border-radius: 4px;
+        height: 14px;
+    }
+}
