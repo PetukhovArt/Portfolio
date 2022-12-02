@@ -1,0 +1,36 @@
+.experience {
+    .title {
+        text-align: center;
+    }
+    .title__circle-base::before {
+        left: 50%;
+        transform: translateX(-35%);
+    }
+    .subtitle {
+        text-align: center;
+        margin-top: 6px;
+    }
+    .divider {
+        margin: 25px auto 0px;
+        width: 60px;
+        margin-bottom: 60px;
+    }
+    &__resume-grid {
+        display: grid;
+        column-gap: 136px;
+        grid-template: repeat(2, minmax(115px, auto))/ repeat(2, 260px);
+        grid-auto-rows: minmax(378px, auto);
+    }
+    &__items-grid {
+        display: grid;
+    }
+    &__item {
+        display: grid;
+    }
+        &-header {
+            display: grid;
+        }
+        &-descr {
+
+        }
+}
