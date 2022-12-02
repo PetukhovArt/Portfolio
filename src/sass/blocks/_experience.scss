@@ -1,36 +1,95 @@
 .experience {
-    .title {
+    &__title {
         text-align: center;
     }
-    .title__circle-base::before {
-        left: 50%;
-        transform: translateX(-35%);
+    .title__circle-base {
+        padding-left: 0;
+        &::before {
+            left: 50%;
+            transform: translateX(-18px);
+        }
     }
     .subtitle {
         text-align: center;
-        margin-top: 6px;
     }
     .divider {
         margin: 25px auto 0px;
         width: 60px;
-        margin-bottom: 60px;
+    }
+    &__resume-group {
+        position: relative;
+    }
+    &__resume-title {
+        text-align: left;
+        padding-left: 43px;
     }
     &__resume-grid {
         display: grid;
+        padding: 60px 89px 120px 65px;
         column-gap: 136px;
-        grid-template: repeat(2, minmax(115px, auto))/ repeat(2, 260px);
+        grid-template: minmax(378px, auto)/ repeat(2, 425px);
         grid-auto-rows: minmax(378px, auto);
     }
+    &__resume-line {
+        background-color: black;
+        height: 1px;
+        width: 343px;
+        position: absolute;
+        transform-origin: bottom left;
+        transform: translate(0px,-11px) rotate(-90deg);
+        &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #ffa501;
+            border-radius: 100%;
+            z-index: -1;
+            right: -15px;
+            top: -7px;
+        }
+    }
     &__items-grid {
+        margin-top: 45px;
         display: grid;
+        row-gap: 45px;
+        grid-template: repeat(2, minmax(129px, auto))/ minmax(auto, 417px);
+        grid-auto-rows: minmax(129px, auto);
+        padding-left: 39px;
+        padding-right: 12px;
     }
     &__item {
         display: grid;
-    }
+        row-gap: 12px;
+        grid-template-rows: minmax(39px,auto) minmax(78px,auto);
+        grid-auto-rows: minmax(39px, auto);
+        padding-right: 12px;
         &-header {
             display: grid;
+            position: relative;
+            column-gap: 20px;
+            grid-template-columns: 38px minmax(auto, 236px);
+            .title__circle-base {
+                padding-left: 18px;
+                padding-top: 13px;
+                &::before {
+                    left: 0%;
+                    transform: translate(7%,27%);
+                }
+            }
+            .line {
+                width: 42px;
+                background-color: black;
+                height: 1px;
+                position: absolute;
+                right: 94%;
+                top: 47%;
+            }
         }
         &-descr {
-
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
         }
+    }
 }
