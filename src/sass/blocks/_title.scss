@@ -56,3 +56,15 @@
     }
 }
 
+.title__circle-left {
+    position: relative;
+    @include before_circle;
+    z-index: 2;
+    &::before {
+        width: 15px;
+        height: 15px;
+        left: -25px;
+        top: 10%;
+    }
+}
+
