@@ -1,26 +1,4 @@
 .skills {
-    &__title {
-        text-align: center;
-    }
-
-    .title__circle-base {
-        padding-left: 0px;
-
-        &::before {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
-    .subtitle {
-        text-align: center;
-    }
-
-    .divider {
-        margin: 25px auto 0px;
-        width: 60px;
-    }
-
     &__items-wrapper {
         padding: 60px 10px 120px 10px;
         display: grid;

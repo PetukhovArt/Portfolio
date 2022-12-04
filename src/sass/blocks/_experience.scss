@@ -1,21 +1,4 @@
 .experience {
-    &__title {
-        text-align: center;
-    }
-    .title__circle-base {
-        padding-left: 0;
-        &::before {
-            left: 50%;
-            transform: translateX(-18px);
-        }
-    }
-    .subtitle {
-        text-align: center;
-    }
-    .divider {
-        margin: 25px auto 0px;
-        width: 60px;
-    }
     &__resume-group {
         position: relative;
     }

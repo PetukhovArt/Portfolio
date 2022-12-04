@@ -17,6 +17,10 @@
     &_fs48 {
         font-size: 48px;
     }
+    &_mid {
+        font-weight: 700;
+        text-align: center;
+    }
 }
 
 .subtitle {
@@ -28,6 +32,10 @@
         line-height: 18px;
         font-weight: 500;
     }
+    &_mid {
+        text-align: center;
+        margin-top: 6px;
+    }
 }
 
 .title__circle-base {
@@ -35,5 +43,16 @@
     @include before_circle;
     padding-left: 10px;
     z-index: 2;
+}
+
+.title__circle-mid {
+    position: relative;
+    @include before_circle;
+    z-index: 2;
+    padding-left: 0;
+    &::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
