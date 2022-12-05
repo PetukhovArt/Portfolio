@@ -5,9 +5,11 @@
     cursor: pointer;
 
     &:hover {
-        transition: all 0.2s;
+        transition: all 0.4s;
+        box-shadow: 5px 5px 50px 10px $main-color;
         span {
-            width: 35px;
+            background: $main-color;
+            transition: all 0.4s;
         }
     }
 
@@ -21,12 +23,6 @@
         height: 3px;
         background: #151812;
         margin-top: 6px;
-        margin-left: 6px;
-    }
-
-    span.long {
-        width: 36px;
-        margin-left: 0;
     }
 }
 

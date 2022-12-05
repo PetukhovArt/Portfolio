@@ -3,15 +3,131 @@
         display: none;
     }
 }
+
 @media(max-width: 1200px) {
     .container {
         max-width: 960px;
+    }
+
+    .promo {
+        padding-left: 70px;
+
+        &__title {
+            color: white;
+            font-size: 40px;
+        }
+    }
+
+    .about {
+        &__text {
+            font-size: 13px;
+        }
+
+        &__wrapper {
+            grid-template-columns: 400px 500px;
+            column-gap: 40px;
+        }
+
+        &__skills {
+            column-gap: 10px;
+            grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
+        }
+
+        &__skills-item {
+            grid-template-columns: 40px 170px;
+
+            .title_fs14 {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .experience {
+        &__resume-grid {
+            column-gap: 100px;
+            padding: 60px 15px 100px 15px;
+        }
+    }
+
+    .subtitle_mid {
+        margin-top: 26px;
+        font-size: 24px;
+    }
+
+    .skills {
+        &__items-wrapper {
+            padding: 21px 25px 0px 75px;
+            row-gap: 19px;
+            grid-template-columns: repeat(3, 270px);
+        }
+
+        &__progress-wrapper {
+            padding: 48px 10px 48px 10px;
+            grid-template-columns: repeat(3, 285px);
+            grid-auto-columns: minmax(285px, auto);
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            padding: 40px 20px 40px 0px;
+            grid-template: repeat(2, 250px)/repeat(4, 230px);
+        }
+    }
+
+    .prices {
+        &__wrapper {
+            padding: 40px 20px 100px;
+            column-gap: 200px;
+        }
     }
 }
 
 @media(max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+
+    .promo {
+        padding-left: 0px;
+    }
+
+    .about {
+        padding: 80px 0 80px 0;
+
+        &__text {
+            font-size: 12px;
+        }
+
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+            column-gap: 40px;
+        }
+
+        .subtitle {
+            font-size: 30px;
+        }
+
+        &__skills {
+            margin-top: 20px;
+            column-gap: 10px;
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            row-gap: 0px;
+        }
+
+        &__skills-item {
+            grid-template-columns: 40px 320px;
+            column-gap: 20px;
+
+            .title_fs14 {
+                font-size: 13px;
+            }
+        }
+
+        &__skills-descr {
+            font-size: 12px;
+        }
     }
 }
 
@@ -27,10 +143,41 @@
     }
 
     .promo {
+        padding-top: 150px;
+
         &__title {
             width: 300px;
             line-height: 39px;
             margin-top: 20px;
+        }
+    }
+
+    .about {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+
+        &__descr {
+            padding-top: 46px;
+
+            .subtitle {
+                font-size: 24px;
+            }
+        }
+
+        &__photo {
+            grid-row: unset;
+        }
+
+        &__skills {
+            row-gap: 10px;
+        }
+
+        &__skills-item {
+            grid-template-columns: 40px 200px;
         }
     }
 }
@@ -38,7 +185,7 @@
 @media(max-width: 576px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     .title {
@@ -49,23 +196,42 @@
 
     .promo {
         background: url(../img/main_bg.jpg) no-repeat 57%/cover;
+        padding-top: 206px;
+
         &__btns {
             margin-top: 30px;
             font-size: 14px;
         }
+
         .burger {
             right: 20px;
         }
     }
+
     .menu {
         &__block {
             width: 250px;
         }
+
         &__list {
             padding-left: 20px;
         }
+
         &__link {
             font-size: 22px;
+        }
+    }
+
+    .about {
+        padding: 40px 0 40px 0;
+
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+
+        &__skills {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
         }
     }
 }
