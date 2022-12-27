@@ -56,22 +56,25 @@
 
     .skills {
         &__items-wrapper {
-            padding: 21px 25px 0px 75px;
+            padding: 25px 0;
             row-gap: 19px;
-            grid-template-columns: repeat(3, 270px);
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
         }
 
         &__progress-wrapper {
             padding: 48px 10px 48px 10px;
-            grid-template-columns: repeat(3, 285px);
+            grid-template-columns: repeat(auto-fit, 285px);
             grid-auto-columns: minmax(285px, auto);
+            justify-content: space-between;
         }
     }
 
     .portfolio {
         &__wrapper {
-            padding: 40px 20px 40px 0px;
+            padding: 40px 0px;
             grid-template: repeat(2, 250px)/repeat(4, 230px);
+            justify-content: center;
         }
     }
 
@@ -175,16 +178,10 @@
 
     .skills {
         &__items-wrapper {
-            padding: 21px 0;
-            grid-template-columns: repeat(2, 270px);
             justify-content: center;
         }
-
         &__progress-wrapper {
             padding: 40px 0 100px;
-            grid-template-columns: repeat(2, 285px);
-            grid-auto-columns: minmax(285px, auto);
-            justify-content: center;
         }
     }
 
@@ -198,7 +195,7 @@
             grid-template: repeat(3, 280px)/repeat(2, 280px);
             grid-auto-columns: 280px;
             justify-content: center;
-
+            gap: 10px;
             .vertical {
                 grid-row: 1/3;
                 grid-column: 1/2;
@@ -268,6 +265,7 @@
 
         &__wrapper {
             grid-template: 340px auto auto / 1fr;
+            justify-content: center;
         }
 
         &__descr {
@@ -292,16 +290,9 @@
     }
 
     .skills {
-        &__items-wrapper {
-            padding: 21px 0;
-            grid-template-columns: repeat(2, 270px);
-            justify-content: center;
-        }
-
         &__progress-wrapper {
             padding: 40px 0px 40px;
-            grid-template-columns: 1fr;
-            grid-auto-columns: 1fr;
+            justify-content: center;
         }
     }
 
@@ -317,7 +308,7 @@
 @media(max-width: 576px) {
     .container {
         max-width: 100vw;
-        padding: 0 8px;
+        padding: 0 10px;
     }
 
     .title {
@@ -408,6 +399,7 @@
             padding: 45px 15px;
             row-gap: 40px;
             grid-template: minmax(378px, auto)/ 300px;
+            justify-content: center;
         }
 
         &__resume-line {
@@ -421,15 +413,9 @@
     }
 
     .skills {
-        &__items-wrapper {
-            grid-template-columns: 270px;
-            padding: 21px 0 0px;
-        }
-
         &__progress-wrapper {
             padding: 48px 0px 48px;
-            grid-template-columns: 300px;
-            grid-auto-columns: 300px;
+            justify-content: center;
         }
 
         &__progress-percent {

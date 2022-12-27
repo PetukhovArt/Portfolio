@@ -23,7 +23,7 @@
         }
             &:hover {
                 transform: scale(1.03);
-                filter: grayscale(100%);
+                filter: blur(2px) grayscale(100%);
             }
     }
 }
